@@ -2,9 +2,7 @@
   "name": "hello",
   "version": "0.1.0",
   "type": "module",
-  "dependencies": {
-    "@explorablegraph/graph": "ExplorableGraph/graph"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "graph serve src/graphs/7.js"
   },
