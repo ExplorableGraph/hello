@@ -1,0 +1,14 @@
+{
+  "name": "hello",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@explorablegraph/graph": "ExplorableGraph/graph"
+  },
+  "scripts": {
+    "start": "graph serve src/graphs/7.js"
+  },
+  "engines": {
+    "node": "v14.15.0"
+  }
+}
