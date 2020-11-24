@@ -1,4 +1,4 @@
-import { AsyncExplorableObject } from "@explorablegraph/async";
+import { AsyncExplorableObject } from "@explorablegraph/exfn";
 
 const graph = new AsyncExplorableObject({
   a: "Hello, a.",

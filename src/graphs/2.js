@@ -1,4 +1,4 @@
-import { AsyncExplorableObject } from "@explorablegraph/async";
+import { AsyncExplorableObject } from "@explorablegraph/exfn";
 
 export default new AsyncExplorableObject({
   a: "Hello, a.",

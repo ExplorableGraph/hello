@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "type": "module",
   "dependencies": {
-    "@explorablegraph/async": "file:../explorable/packages/async",
-    "@explorablegraph/eg": "file:../explorable/packages/eg"
+    "@explorablegraph/eg": "npm:@explorablegraph/eg@0.0.1",
+    "@explorablegraph/exfn": "npm:@explorablegraph/async@0.0.1"
   },
   "scripts": {
     "start": "graph serve src/graphs/7.js"

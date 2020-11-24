@@ -1,4 +1,4 @@
-import { AsyncExplorableObject } from "@explorablegraph/async";
+import { AsyncExplorableObject } from "@explorablegraph/exfn";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
