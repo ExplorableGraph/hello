@@ -1,8 +1,8 @@
-import { Graph } from "@explorablegraph/graph";
+import { AsyncExplorableObject } from "@explorablegraph/async";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 
-export default Graph.from({
+export default new AsyncExplorableObject({
   *[Symbol.asyncIterator]() {
     yield* ["index.html", ...letters];
   },
@@ -11,7 +11,7 @@ export default Graph.from({
     .map((letter) => `<li><a href="${letter}">${letter}</a></li>`)
     .join(""),
 
-  async get(key) {
-    return this.source[key] || `Hello, ${key}.`;
+  async [AsyncExplorableObject.get](key) {
+    return this[key] || `Hello, ${key}.`;
   },
 });

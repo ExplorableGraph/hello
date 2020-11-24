@@ -1,14 +1,12 @@
-import { constants, Graph } from "@explorablegraph/graph";
+import { AsyncExplorableObject } from "@explorablegraph/async";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-export default Graph.from({
+export default new AsyncExplorableObject({
   *[Symbol.asyncIterator]() {
     yield* routes;
   },
-
-  [constants.asyncIteratorStringKey]: JSON.stringify(routes, null, 2),
 
   "index.html": letters
     .map((letter) => `<li><a href="${letter}">${letter}</a></li>`)
@@ -16,7 +14,10 @@ export default Graph.from({
 
   secret: "You have found the secret page!",
 
-  async get(key) {
-    return this.source[key] || `Hello, ${key}.`;
+  async [AsyncExplorableObject.get](key) {
+    return this[key] || `Hello, ${key}.`;
   },
+
+  // TODO: Get this key from web package.
+  "__keys__.json": JSON.stringify(routes, null, 2),
 });

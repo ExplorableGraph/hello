@@ -1,13 +1,13 @@
-import { Graph } from "@explorablegraph/graph";
+import { AsyncExplorableObject } from "@explorablegraph/async";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 
-class HelloGraph extends Graph {
+class HelloGraph extends AsyncExplorableObject {
   *[Symbol.asyncIterator]() {
     yield* ["index.html", ...letters];
   }
 
-  async get(key) {
+  async [AsyncExplorableObject.get](key) {
     if (key === "index.html") {
       const links = letters
         .map((letter) => `<li><a href="${letter}">${letter}</a></li>`)

@@ -2,7 +2,10 @@
   "name": "hello",
   "version": "0.1.0",
   "type": "module",
-  "dependencies": {},
+  "dependencies": {
+    "@explorablegraph/async": "file:../explorable/packages/async",
+    "@explorablegraph/eg": "file:../explorable/packages/eg"
+  },
   "scripts": {
     "start": "graph serve src/graphs/7.js"
   },
