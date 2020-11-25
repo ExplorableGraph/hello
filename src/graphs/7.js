@@ -1,11 +1,11 @@
-import { AsyncExplorableObject } from "@explorablegraph/exfn";
+import { get, keys } from "@explorablegraph/exfn";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-export default new AsyncExplorableObject({
-  *[Symbol.asyncIterator]() {
-    yield* routes;
+export default {
+  [keys]() {
+    return routes[Symbol.iterator]();
   },
 
   "index.html": letters
@@ -14,10 +14,10 @@ export default new AsyncExplorableObject({
 
   secret: "You have found the secret page!",
 
-  async [AsyncExplorableObject.get](key) {
+  [get](key) {
     return this[key] || `Hello, ${key}.`;
   },
 
   // TODO: Get this key from web package.
   "__keys__.json": JSON.stringify(routes, null, 2),
-});
+};

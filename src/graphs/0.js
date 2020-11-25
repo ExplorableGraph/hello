@@ -1,11 +1,11 @@
-import { AsyncExplorableObject } from "@explorablegraph/exfn";
+import { Explorable, get } from "@explorablegraph/exfn";
 
-const graph = new AsyncExplorableObject({
+const explorable = Explorable({
   a: "Hello, a.",
   b: "Hello, b.",
   c: "Hello, c.",
 });
 
-for await (const key of graph) {
-  console.log(await graph[AsyncExplorableObject.get](key));
+for (const key of explorable) {
+  console.log(explorable[get](key));
 }
