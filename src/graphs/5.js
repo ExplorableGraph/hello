@@ -1,10 +1,11 @@
 import { get, keys } from "@explorablegraph/exfn";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
+const routes = ["index.html", ...letters];
 
 export default {
-  [keys]() {
-    return ["index.html", ...letters][Symbol.iterator]();
+  *[keys]() {
+    yield* routes;
   },
 
   "index.html": letters

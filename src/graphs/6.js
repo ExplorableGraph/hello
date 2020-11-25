@@ -1,10 +1,11 @@
 import { Explorable, get, keys } from "@explorablegraph/exfn";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
+const routes = ["index.html", ...letters];
 
 class HelloGraph extends Explorable {
-  [keys]() {
-    return ["index.html", ...letters][Symbol.iterator]();
+  *[keys]() {
+    yield* routes;
   }
 
   [get](key) {

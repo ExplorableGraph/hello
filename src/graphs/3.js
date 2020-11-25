@@ -3,8 +3,8 @@ import { get, keys } from "@explorablegraph/exfn";
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 
 export default {
-  [keys]() {
-    return ["index.html", ...letters][Symbol.iterator]();
+  *[keys]() {
+    yield* ["index.html", ...letters];
   },
 
   [get](key) {

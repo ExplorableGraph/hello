@@ -1,11 +1,11 @@
-import { get, keys } from "@explorablegraph/exfn";
+import { Explorable, get, keys } from "@explorablegraph/exfn";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-export default {
-  [keys]() {
-    return routes[Symbol.iterator]();
+export default new Explorable({
+  *[keys]() {
+    yield* routes;
   },
 
   "index.html": letters
@@ -20,4 +20,4 @@ export default {
 
   // TODO: Get this key from web package.
   "__keys__.json": JSON.stringify(routes, null, 2),
-};
+});
