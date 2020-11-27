@@ -12,5 +12,12 @@
       "program": "${workspaceFolder}/node_modules/@explorablegraph/eg/src/eg.js",
       "args": ["json", "${workspaceFolder}/src/graphs/7.js"]
     }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Spike",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${file}",
+    },
   ]
 }
