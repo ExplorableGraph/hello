@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "type": "module",
   "dependencies": {
+    "@explorablegraph/core": "file:../explorable/packages/core",
     "@explorablegraph/eg": "npm:@explorablegraph/eg@0.0.1",
-    "@explorablegraph/exfn": "npm:@explorablegraph/async@0.0.1",
+    "@explorablegraph/core": "npm:@explorablegraph/async@0.0.1",
     "@explorablegraph/symbols": "npm:@explorablegraph/symbols@0.0.1"
   },
   "scripts": {

@@ -1,4 +1,4 @@
-import { Explorable, get } from "@explorablegraph/exfn";
+import { Explorable, get } from "@explorablegraph/core";
 
 const explorable = Explorable({
   a: "Hello, a.",

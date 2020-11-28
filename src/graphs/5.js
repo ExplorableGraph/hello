@@ -1,4 +1,4 @@
-import { get, keys } from "@explorablegraph/exfn";
+import { get, keys } from "@explorablegraph/core";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
