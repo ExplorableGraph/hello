@@ -19,5 +19,5 @@ export default new Explorable({
   },
 
   // TODO: Get this key from web package.
-  "__keys__.json": JSON.stringify(routes, null, 2),
+  ".keys.json": JSON.stringify(routes, null, 2),
 });
