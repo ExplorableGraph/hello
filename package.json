@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "type": "module",
   "dependencies": {
-    "@explorablegraph/core": "file:../explorable/packages/core",
-    "@explorablegraph/eg": "npm:@explorablegraph/eg@0.0.1",
-    "@explorablegraph/core": "npm:@explorablegraph/async@0.0.1",
-    "@explorablegraph/symbols": "npm:@explorablegraph/symbols@0.0.1"
+    "@explorablegraph/core": "0.0.1",
+    "@explorablegraph/eg": "0.0.1",
+    "@explorablegraph/exlang": "0.0.1",
+    "@explorablegraph/node": "0.0.1",
+    "@explorablegraph/symbols": "0.0.1",
+    "@explorablegraph/web": "0.0.1",
+    "@explorablegraph/webserver": "0.0.1"
   },
   "scripts": {
-    "start": "graph serve src/graphs/7.js"
+    "start": "eg 'serve(:src/stage/site.js)'"
   },
   "engines": {
     "node": "v14.15.0"
