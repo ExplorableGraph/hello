@@ -1,4 +1,4 @@
-import { Cache, Compose, Explorable, get, keys } from "@explorablegraph/core";
+import { Cache, Compose, get, keys } from "@explorablegraph/core";
 import { Files } from "@explorablegraph/node";
 import { DefaultPages } from "@explorablegraph/web";
 import path from "path";
@@ -7,9 +7,8 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const letters = ["a", "b", "c"];
 
-class GreetingPages extends Explorable {
+class GreetingPages {
   constructor(greeting) {
-    super();
     this.greeting = greeting;
   }
   [get](key) {
