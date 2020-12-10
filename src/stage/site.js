@@ -1,4 +1,4 @@
-import { Compose, Explorable, get, keys } from "@explorablegraph/core";
+import { Cache, Compose, Explorable, get, keys } from "@explorablegraph/core";
 import { Files } from "@explorablegraph/node";
 import { DefaultPages } from "@explorablegraph/web";
 import path from "path";
@@ -22,10 +22,14 @@ class GreetingPages extends Explorable {
   }
 }
 
-export default new DefaultPages(
-  new Compose(new Files(`${dirname}/site`), {
-    english: new GreetingPages("Hello"),
-    french: new GreetingPages("Bonjour"),
-    spanish: new GreetingPages("Hola"),
-  })
+export default new Compose(
+  new Files(`${dirname}/static`),
+  new Cache(
+    new Files(`${dirname}/cache`),
+    new DefaultPages({
+      english: new GreetingPages("Hello"),
+      french: new GreetingPages("Bonjour"),
+      spanish: new GreetingPages("Hola"),
+    })
+  )
 );

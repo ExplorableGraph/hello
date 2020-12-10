@@ -11,7 +11,7 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/eg/src/eg.js",
       "cwd": "${workspaceFolder}/src/stage",
-      "args": ["IndexPages(:site.js)"]
+      "args": [":site.js"]
     },
     {
       "type": "node",
