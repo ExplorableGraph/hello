@@ -7,7 +7,9 @@ class GreetingPages {
     this.greeting = greeting;
   }
   [get](key) {
-    return `${this.greeting}, ${key}.`;
+    return !DefaultPages.isDefaultPage(key)
+      ? `${this.greeting}, ${key}.`
+      : undefined;
   }
   [keys]() {
     return [...letters][Symbol.iterator]();
