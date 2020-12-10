@@ -10,6 +10,6 @@ class GreetingPages {
     return `${this.greeting}, ${key}.`;
   }
   [keys]() {
-    return [...letters][Symbol.iterator]();
+    return letters[Symbol.iterator]();
   }
 }

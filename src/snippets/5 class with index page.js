@@ -12,6 +12,6 @@ class GreetingPages {
       : undefined;
   }
   [keys]() {
-    return [...letters][Symbol.iterator]();
+    return letters[Symbol.iterator]();
   }
 }
