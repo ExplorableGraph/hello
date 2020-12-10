@@ -1,7 +1,7 @@
 const keys = Symbol();
 const get = Symbol();
 
-// Display all the  (key, value) pairs of an in-memory object.
+// Display all the (key, value) pairs of an in-memory object.
 const obj = new Explorable({
   a: "Hello, a",
   b: "Hello, b",
