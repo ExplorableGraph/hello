@@ -1,43 +1,31 @@
-import { Compose, get, keys } from "@explorablegraph/core";
+import { Compose, Explorable, get, keys } from "@explorablegraph/core";
 import { Files } from "@explorablegraph/node";
-import { IndexPages } from "@explorablegraph/web";
+import { DefaultPages } from "@explorablegraph/web";
 import path from "path";
 import { fileURLToPath } from "url";
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const letters = ["a", "b", "c"];
 
-const english = {
+class GreetingPages extends Explorable {
+  constructor(greeting) {
+    super();
+    this.greeting = greeting;
+  }
   [get](key) {
-    return key !== "index.html" ? `Hello, ${key}.` : undefined;
-  },
+    return !DefaultPages.isDefaultPage(key)
+      ? `${this.greeting}, ${key}.`
+      : undefined;
+  }
   [keys]() {
     return [...letters][Symbol.iterator]();
-  },
-};
+  }
+}
 
-const french = {
-  [get](key) {
-    return key !== "index.html" ? `Bonjour, ${key}.` : undefined;
-  },
-  [keys]() {
-    return [...letters][Symbol.iterator]();
-  },
-};
-
-const spanish = {
-  [get](key) {
-    return key !== "index.html" ? `Hola, ${key}.` : undefined;
-  },
-  [keys]() {
-    return [...letters][Symbol.iterator]();
-  },
-};
-
-export default new IndexPages(
+export default new DefaultPages(
   new Compose(new Files(`${dirname}/site`), {
-    english,
-    french,
-    spanish,
+    english: new GreetingPages("Hello"),
+    french: new GreetingPages("Bonjour"),
+    spanish: new GreetingPages("Hola"),
   })
 );
