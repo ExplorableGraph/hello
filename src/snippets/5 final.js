@@ -1,4 +1,4 @@
-import { Compose, get, keys } from "@explorablegraph/core";
+import { Cache, Compose, get, keys } from "@explorablegraph/core";
 import { Files } from "@explorablegraph/node";
 import { DefaultPages } from "@explorablegraph/web";
 import path from "path";
@@ -23,9 +23,12 @@ class GreetingPages {
 
 export default new Compose(
   new Files(`${dirname}/static`),
-  new DefaultPages({
-    english: new GreetingPages("Hello"),
-    french: new GreetingPages("Bonjour"),
-    spanish: new GreetingPages("Hola"),
-  })
+  new Cache(
+    new Files(`${dirname}/cache`),
+    new DefaultPages({
+      english: new GreetingPages("Hello"),
+      french: new GreetingPages("Bonjour"),
+      spanish: new GreetingPages("Hola"),
+    })
+  )
 );
