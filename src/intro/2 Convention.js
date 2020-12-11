@@ -1,4 +1,4 @@
-// Display all the  (key, value) pairs of an in-memory object.
+// Display all the (key, value) pairs of an in-memory object.
 const obj = {
   a: "Hello, a",
   b: "Hello, b",
