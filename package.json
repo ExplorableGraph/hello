@@ -8,7 +8,7 @@
     "@explorablegraph/exlang": "0.0.2",
     "@explorablegraph/node": "0.0.2",
     "@explorablegraph/symbols": "0.0.2",
-    "@explorablegraph/web": "0.0.2",
+    "@explorablegraph/web": "0.0.2-b",
     "@explorablegraph/webserver": "0.0.2"
   },
   "scripts": {
