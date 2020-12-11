@@ -6,6 +6,8 @@
     "@explorablegraph/core": "0.0.2",
     "@explorablegraph/eg": "0.0.2",
     "@explorablegraph/exlang": "0.0.2",
+    "@explorablegraph/graphviz": "0.0.2",
+    "@explorablegraph/integrations": "0.0.2",
     "@explorablegraph/node": "0.0.2",
     "@explorablegraph/symbols": "0.0.2",
     "@explorablegraph/web": "0.0.2-c",
