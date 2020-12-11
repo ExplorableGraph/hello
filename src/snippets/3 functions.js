@@ -1,6 +1,7 @@
 import { ExplorableFunctions } from "@explorablegraph/core";
+import { DefaultPages } from "@explorablegraph/web";
 
-new ExplorableFunctions(
+export default new ExplorableFunctions(
   {
     english: (x) =>
       !DefaultPages.isDefaultPage(x) ? `Hello, ${x}.` : undefined,
