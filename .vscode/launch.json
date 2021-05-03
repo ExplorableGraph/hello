@@ -10,8 +10,10 @@
       "name": "eg",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/eg/src/eg.js",
-      "cwd": "${workspaceFolder}/src/stage",
-      "args": []
+      "cwd": "${workspaceFolder}/src/app",
+      "args": ["serve(App(Files(.)))"],
+      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
+      "runtimeArgs": ["--preserve-symlinks"]
     },
     {
       "type": "node",
@@ -19,7 +21,8 @@
       "name": "Serve",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/eg/src/eg.js",
-      "args": ["serve(:${file})"]
+      "args": ["serve(:${file})"],
+      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node"
     },
     {
       "type": "node",
