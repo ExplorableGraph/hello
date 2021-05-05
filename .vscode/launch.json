@@ -21,7 +21,8 @@
       "name": "app",
       "skipFiles": ["<node_internals>/**"],
       "program": "app.js",
-      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node"
+      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
+      "runtimeArgs": ["--preserve-symlinks"]
     },
     {
       "type": "node",

@@ -1,14 +1,14 @@
-import { ExplorableApp } from "@explorablegraph/web";
-import { requestListener } from "@explorablegraph/webserver";
+import { Files } from "@explorablegraph/explorable/packages/node/exports.js";
+import { ExplorableApp } from "@explorablegraph/explorable/packages/web/exports.js";
+import { requestListener } from "@explorablegraph/explorable/packages/webserver/exports.js";
 import http from "http";
 import path from "path";
 import { fileURLToPath } from "url";
-import { Files } from "../explorable/packages/eg/node_modules/@explorablegraph/node/exports.js";
 
 const port = 5000;
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
-const appDirname = path.join(dirname, "src/app");
+const appDirname = path.join(dirname, "src/app/products");
 const files = new Files(appDirname);
 const graph = new ExplorableApp(files);
 

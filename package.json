@@ -3,11 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@explorablegraph/core": "file:../explorable/packages/core",
-    "@explorablegraph/eg": "file:../explorable/packages/eg",
-    "@explorablegraph/web": "file:../explorable/packages/web",
-    "@explorablegraph/webserver": "file:../explorable/packages/webserver",
-    "yaml": "1.10.0"
+    "@explorablegraph/explorable": "file:../explorable"
   },
   "scripts": {
     "start": "eg 'serve(:src/stage/site.js)'"
