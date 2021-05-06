@@ -6,7 +6,7 @@
     "@explorablegraph/explorable": "file:../explorable"
   },
   "scripts": {
-    "start": "eg 'serve(:src/stage/site.js)'"
+    "start": "node app.js"
   },
   "engines": {
     "node": "v15.5.0"
