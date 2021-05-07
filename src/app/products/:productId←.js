@@ -1,7 +1,7 @@
 export default async function () {
   const { productId } = this.params;
   if (productId !== "index.html") {
-    return `Hello ${productId}`;
+    return `<h1>${productId}</h1>`;
     // const buffer = await this.get("..", `${productId}.json`);
     // if (buffer) {
     //   const json = String(buffer);
