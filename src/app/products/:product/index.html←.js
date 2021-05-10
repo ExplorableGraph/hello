@@ -1,9 +1,13 @@
-export default async function () {
+export default async function (...args) {
   const { product } = this.params;
-  const realFolder = await this.get("..", product);
-  const description = await realFolder.get("description");
-  return `
-    <h1>${product}</h1>
-    <p>${description}</p>
-  `;
+  if (product === undefined) {
+    return undefined;
+  }
+  const productFolder = await this.get("..", product);
+  const description = (await productFolder.get("description")) ?? "";
+  const photo = await productFolder.get("photo.jpg");
+  const img = photo ? `<img src="../${product}/photo.jpg">` : "";
+  return `<h1>${product}</h1>
+<p>${description}</p>
+${img}`;
 }

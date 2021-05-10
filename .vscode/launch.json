@@ -11,7 +11,7 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/packages/eg/src/eg.js",
       "cwd": "${workspaceFolder}",
-      "args": [":graph.js"],
+      "args": ["@graph.js"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
@@ -30,7 +30,7 @@
       "name": "Serve",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/eg/src/eg.js",
-      "args": ["serve(:${file})"],
+      "args": ["serve(@${file})"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node"
     },
     {
