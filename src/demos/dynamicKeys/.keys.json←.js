@@ -1,8 +1,7 @@
-import path from "path";
+import getPeople from "./.getPeople.js";
 
 export default async function () {
-  const dataFolder = await this.get("data");
-  const dataFiles = await dataFolder.keys();
-  const products = dataFiles((dataFile) => path.basename(dataFile));
-  return products;
+  const people = await getPeople();
+  const emails = people.map((person) => person.email);
+  return emails;
 }
