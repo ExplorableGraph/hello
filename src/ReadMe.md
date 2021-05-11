@@ -43,7 +43,7 @@ export default function () {
 Then:
 
 ```js
-const graph = new VirtualValuesMixin(Files(example));
+const graph = new VirtualValuesMixin(Files)(example);
 await graph.get("dynamic")(); // "Hello, world"
 ```
 
