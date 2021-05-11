@@ -25,7 +25,7 @@ const graph = new VirtualKeysMixin(ExplorableGraph)({
   ".keys.json": ["a", "b", "c"],
 });
 
-await graph.keys(); // [".keys.json", "a", "b", "c"]
+await graph.keys(); // ["a", "b", "c", ".keys.json"]
 ```
 
 ## VirtualValuesMixin
@@ -73,4 +73,22 @@ const graph = new WildcardKeysMixin(ExplorableGraph)({
 
 await graph.get("Alice"); // "Hello, Alice"
 await graph.get("Bob"); // "Hello, Bob"
+```
+
+If the wildcard is a subgraph, its contents will appear as virtual members of any other subgraphs.
+
+```js
+const graph = new WildcardKeysMixin(ExplorableGraph)({
+  ":fallback": {
+    bar: "Hello bar",
+  },
+  stuff: {
+    foo: "Hello foo",
+  },
+});
+
+const stuff = await graph.get("stuff");
+await stuff.keys(); // ["foo", "bar"]
+await stuff.get("foo"); // "Hello foo"
+await stuff.get("bar"); // "Hello bar"
 ```
