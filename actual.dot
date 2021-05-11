@@ -1,0 +1,36 @@
+digraph g {
+  rankdir=LR;
+  "" [label="/"];
+  "" -> "/bar.html←.js";
+  "/bar.html←.js" [label="bar.html←.js"];
+  "" -> "/foo.html";
+  "/foo.html" [label="foo.html"];
+  "" -> "/products";
+  "/products" [label="products"];
+  "/products" -> "/products/:product";
+  "/products/:product" [label=":product"];
+  "/products/:product" -> "/products/:product/index.html←.js";
+  "/products/:product/index.html←.js" [label="index.html←.js"];
+  "/products" -> "/products/Backpack";
+  "/products/Backpack" [label="Backpack"];
+  "/products" -> "/products/Hammock";
+  "/products/Hammock" [label="Hammock"];
+  "/products/Hammock" -> "/products/Hammock/description";
+  "/products/Hammock/description" [label="description"];
+  "/products/Hammock" -> "/products/Hammock/photo.jpg";
+  "/products/Hammock/photo.jpg" [label="photo.jpg"];
+  "/products" -> "/products/Sleeping Bag";
+  "/products/Sleeping Bag" [label="Sleeping Bag"];
+  "/products/Sleeping Bag" -> "/products/Sleeping Bag/description";
+  "/products/Sleeping Bag/description" [label="description"];
+  "/products/Sleeping Bag" -> "/products/Sleeping Bag/photo.jpg";
+  "/products/Sleeping Bag/photo.jpg" [label="photo.jpg"];
+  "/products" -> "/products/Tent";
+  "/products/Tent" [label="Tent"];
+  "/products/Tent" -> "/products/Tent/description";
+  "/products/Tent/description" [label="description"];
+  "/products/Tent" -> "/products/Tent/photo.jpg";
+  "/products/Tent/photo.jpg" [label="photo.jpg"];
+  "/products" -> "/products/index.html←.js";
+  "/products/index.html←.js" [label="index.html←.js"];
+}

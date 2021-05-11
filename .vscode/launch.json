@@ -11,7 +11,8 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/packages/eg/src/eg.js",
       "cwd": "${workspaceFolder}",
-      "args": ["@graph.js"],
+      // "args": ["@graph.js"],
+      "args": ["App(src/stages)"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },

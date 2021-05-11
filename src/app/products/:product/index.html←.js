@@ -6,7 +6,7 @@ export default async function (...args) {
   const productFolder = await this.get("..", product);
   const description = (await productFolder.get("description")) ?? "";
   const photo = await productFolder.get("photo.jpg");
-  const img = photo ? `<img src="../${product}/photo.jpg">` : "";
+  const img = photo ? `<img src="photo.jpg">` : "";
   return `<h1>${product}</h1>
 <p>${description}</p>
 ${img}`;

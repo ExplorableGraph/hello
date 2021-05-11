@@ -1,6 +1,6 @@
 export default async function () {
   const { product } = this.params;
-  if (product === "index.html") {
+  if (product === undefined || product === "index.html") {
     // Not a product
     return;
   }
