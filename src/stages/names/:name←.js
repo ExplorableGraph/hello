@@ -3,5 +3,5 @@ export default function () {
   if (name === undefined || name === "index.html") {
     return undefined;
   }
-  return `Hello, ${name}`;
+  return `Hello, ${name}.`;
 }

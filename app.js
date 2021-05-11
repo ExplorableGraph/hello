@@ -1,4 +1,4 @@
-import { requestListener } from "@explorablegraph/explorable/packages/webserver/exports.js";
+import { requestListener } from "@explorablegraph/explorable";
 import http from "http";
 import graph from "./graph.js";
 

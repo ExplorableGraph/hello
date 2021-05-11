@@ -1,4 +1,4 @@
-import { ExplorableApp } from "@explorablegraph/explorable/packages/web/exports.js";
+import { ExplorableApp } from "@explorablegraph/explorable";
 import path from "path";
 import { fileURLToPath } from "url";
 

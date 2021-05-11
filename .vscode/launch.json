@@ -7,21 +7,21 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "eg",
+      "name": "app",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/packages/eg/src/eg.js",
-      "cwd": "${workspaceFolder}",
-      // "args": ["@graph.js"],
-      "args": ["App(src/stages)"],
+      "program": "app.js",
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "app",
+      "name": "eg",
       "skipFiles": ["<node_internals>/**"],
-      "program": "app.js",
+      "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/packages/eg/src/eg.js",
+      "cwd": "${workspaceFolder}",
+      "args": ["@graph.js"],
+      // "args": ["App(src/stages)"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
