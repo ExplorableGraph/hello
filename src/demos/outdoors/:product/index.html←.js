@@ -1,4 +1,4 @@
-export default async function (...args) {
+export default async function () {
   const { product } = this.params;
   if (product === undefined) {
     return undefined;
