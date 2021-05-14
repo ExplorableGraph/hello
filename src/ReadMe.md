@@ -79,7 +79,7 @@ If the wildcard is a subgraph, its contents will appear as virtual members of an
 
 ```js
 const graph = new WildcardKeysMixin(ExplorableGraph)({
-  ":fallback": {
+  ":more": {
     bar: "Hello bar",
   },
   stuff: {
