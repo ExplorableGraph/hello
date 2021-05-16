@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <h1>Outdoor Store</h1>
+    {{#each this}}
+      <p>
+        <a href="{{@key}}/">
+          <img width="300px" src="{{@key}}/photo.jpg"><br>
+          {{@key}}
+        </a>
+      </p>
+    {{/each}}
+  </body>
+</html>
