@@ -8,8 +8,5 @@
   },
   "scripts": {
     "start": "node app.js"
-  },
-  "engines": {
-    "node": "v15.5.0"
   }
 }
