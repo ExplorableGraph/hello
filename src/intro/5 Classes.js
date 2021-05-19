@@ -1,8 +1,5 @@
-const keys = Symbol();
-const get = Symbol();
-
 // Display all the (key, value) pairs of an in-memory object.
-const obj = new Explorable({
+const obj = new ExplorableObject({
   a: "Hello, a",
   b: "Hello, b",
   c: "Hello, c",
@@ -20,7 +17,7 @@ await display(site);
 
 // Display any object's (key, value) pairs.
 async function display(obj) {
-  for await (const key of obj[keys]()) {
-    console.log(key, await obj[get](key));
+  for await (const key of obj()) {
+    console.log(key, await obj.get(key));
   }
 }

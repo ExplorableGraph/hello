@@ -6,10 +6,10 @@ const obj = {
   a: "Hello, a",
   b: "Hello, b",
   c: "Hello, c",
-  [keys]() {
-    return Object.keys(this);
+  async *[Symbol.asyncIterator]() {
+    yield* Object.keys(this);
   },
-  [get](key) {
+  async get(key) {
     return this[key];
   },
 };
@@ -21,10 +21,10 @@ import path from "path";
 import process from "process";
 const folder = {
   dirname: process.cwd(),
-  async [keys]() {
-    return fs.readdir(this.dirname);
+  async *[Symbol.asyncIterator]() {
+    yield* fs.readdir(this.dirname);
   },
-  async [get](key) {
+  async get(key) {
     return String(await fs.readFiles(path.join(this.dirname, key)));
   },
 };
@@ -35,10 +35,10 @@ await display(folder);
 // import fetch from "node-fetch"; // Node doesn't have fetch yet.
 const site = {
   url: "https://site.com",
-  async [keys]() {
-    return ["a", "b", "c"]; // How can we get this list automatically? */
+  async *[Symbol.asyncIterator]() {
+    yield* ["a", "b", "c"]; // How can we get this list automatically? */
   },
-  async [get](key) {
+  async get(key) {
     return await fetch(new URL(key, this.url).href);
   },
 };
