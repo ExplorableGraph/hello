@@ -1,11 +1,12 @@
-import { Explorable, get } from "@explorablegraph/core";
+import { ExplorableObject } from "@explorablegraph/explorable";
 
-const explorable = Explorable({
+const graph = new ExplorableObject({
   a: "Hello, a.",
   b: "Hello, b.",
   c: "Hello, c.",
 });
 
-for (const key of explorable) {
-  console.log(explorable[get](key));
+for await (const key of graph) {
+  const value = await graph.get(key);
+  console.log(value);
 }

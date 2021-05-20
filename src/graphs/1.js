@@ -1,8 +1,9 @@
-import { Explorable } from "@explorablegraph/core";
+import { ExplorableObject } from "@explorablegraph/explorable";
 
-const exfn = new Explorable({
+const graph = new ExplorableObject({
   a: "Hello, a.",
   b: "Hello, b.",
   c: "Hello, c.",
 });
-export default exfn;
+
+export default graph;

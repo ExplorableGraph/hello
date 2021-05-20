@@ -1,10 +1,10 @@
-import { Explorable, get, keys } from "@explorablegraph/core";
+import { ExplorableObject } from "@explorablegraph/explorable";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-export default new Explorable({
-  *[keys]() {
+export default new ExplorableObject({
+  *[Symbol.asyncIterator]() {
     yield* routes;
   },
 
@@ -14,7 +14,7 @@ export default new Explorable({
 
   secret: "You have found the secret page!",
 
-  [get](key) {
+  async get(key) {
     return this[key] || `Hello, ${key}.`;
   },
 

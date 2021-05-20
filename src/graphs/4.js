@@ -1,10 +1,10 @@
-import { get, keys } from "@explorablegraph/core";
+import { ExplorableObject } from "@explorablegraph/explorable";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-export default {
-  *[keys]() {
+export default new ExplorableObject({
+  async *[Symbol.asyncIterator]() {
     yield* routes;
   },
 
@@ -12,7 +12,7 @@ export default {
     .map((letter) => `<li><a href="${letter}">${letter}</a></li>`)
     .join(""),
 
-  [get](key) {
+  async get(key) {
     return this[key] || `Hello, ${key}.`;
   },
-};
+});

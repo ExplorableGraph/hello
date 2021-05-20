@@ -1,14 +1,14 @@
-import { Explorable, get, keys } from "@explorablegraph/core";
+import { ExplorableGraph } from "@explorablegraph/explorable";
 
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-class HelloGraph extends Explorable {
-  *[keys]() {
+class HelloGraph extends ExplorableGraph {
+  async *[Symbol.asyncIterator]() {
     yield* routes;
   }
 
-  [get](key) {
+  async get(key) {
     if (key === "index.html") {
       const links = letters
         .map((letter) => `<li><a href="${letter}">${letter}</a></li>`)
