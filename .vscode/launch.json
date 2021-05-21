@@ -21,8 +21,8 @@
       "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/src/eg/eg.js",
       "cwd": "${workspaceFolder}/src",
       // "args": ["@graph.js"],
-      // "args": ["App(src/stages)"],
-      "args": ["serve(Cache(Files(cache), App(demos)))"],
+      "args": ["App(src/transform graph)"],
+      // "args": ["serve(Cache(Files(cache), App(demos)))"],
       // "args": ["serve(App(demos))"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.0.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
