@@ -1,9 +1,7 @@
-import { ExplorableGraph } from "@explorablegraph/explorable";
-
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-class HelloGraph extends ExplorableGraph {
+class HelloGraph {
   async *[Symbol.asyncIterator]() {
     yield* routes;
   }

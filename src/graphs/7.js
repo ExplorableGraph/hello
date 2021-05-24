@@ -1,9 +1,7 @@
-import { ExplorableObject } from "@explorablegraph/explorable";
-
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 const routes = ["index.html", ...letters];
 
-export default new ExplorableObject({
+export default {
   *[Symbol.asyncIterator]() {
     yield* routes;
   },
@@ -20,4 +18,4 @@ export default new ExplorableObject({
 
   // TODO: Get this key from web package.
   ".keys.json": JSON.stringify(routes, null, 2),
-});
+};

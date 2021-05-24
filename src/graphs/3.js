@@ -1,8 +1,6 @@
-import { ExplorableObject } from "@explorablegraph/explorable";
-
 const letters = ["a", "b", "c", "d", "e", "f", "g", "i", "j"];
 
-export default new ExplorableObject({
+export default {
   async *[Symbol.asyncIterator]() {
     yield* ["index.html", ...letters];
   },
@@ -17,4 +15,4 @@ export default new ExplorableObject({
       return `Hello, ${key}.`;
     }
   },
-});
+};
