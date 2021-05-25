@@ -36,7 +36,8 @@ for (const fileName of files) {
 // E.g. for site.com/a, site.com/b, site.com/c, get all those resources.
 // import fetch from "node-fetch"; // Node doesn't have fetch yet.
 const siteUrl = "https://site.com";
-const routes = ["Alice", "Bob", "Carol"]; // How can we get this list automatically?
+const routesUrl = new URL(".keys.json", siteUrl);
+const routes = JSON.parse(await fetch(routesUrl.href));
 for (const route of routes) {
   const pageUrl = new URL(route, siteUrl);
   const resource = await fetch(pageUrl.href);
