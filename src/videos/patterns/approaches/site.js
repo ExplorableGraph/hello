@@ -1,6 +1,6 @@
 import fetch from "node-fetch"; // Node doesn't have fetch yet.
 
-// Display all the (route, resource) results at a given net location.
+// Display all the resources results at a given net location.
 // E.g. for site.com/a, site.com/b, site.com/c, get all those resources.
 const siteUrl =
   "https://explorablegraph.github.io/hello/src/intro2/graphs/site/";

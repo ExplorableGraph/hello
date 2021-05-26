@@ -28,7 +28,7 @@ import process from "process";
 const folder = process.cwd();
 const folderKeys = async (obj) => await fs.readdir(obj);
 const folderGet = async (obj, key) =>
-  String(await fs.readFiles(path.join(obj, key)));
+  String(await fs.readFile(path.join(obj, key)));
 for await (const key of folderKeys(folder)) {
   console.log(key, await folderGet(folder, key));
 }

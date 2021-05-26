@@ -27,7 +27,7 @@ const folder = process.cwd();
 const files = await fs.readdir(folder);
 for (const fileName of files) {
   const filePath = path.join(folder, fileName);
-  const buffer = await fs.readFiles(filePath);
+  const buffer = await fs.readFile(filePath);
   const text = String(buffer);
   console.log(fileName, text);
 }
