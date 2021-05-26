@@ -4,7 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const moduleFolder = path.dirname(fileURLToPath(import.meta.url));
-const filesFolder = path.join(moduleFolder, "files");
+const filesFolder = path.resolve(moduleFolder, "../files");
 const files = await fs.readdir(filesFolder);
 
 for (const fileName of files) {
