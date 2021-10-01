@@ -4,9 +4,13 @@
   "type": "module",
   "dependencies": {
     "@explorablegraph/explorable": "github:ExplorableGraph/explorable#97590ef0",
-    "node-fetch": "2.6.1"
+    "handlebars": "4.7.7",
+    "node-fetch": "2.6.5"
   },
   "scripts": {
     "start": "node app.js"
+  },
+  "engines": {
+    "node": "16.9.1"
   }
 }
