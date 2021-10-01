@@ -8,7 +8,7 @@
     "node-fetch": "2.6.5"
   },
   "scripts": {
-    "start": "eg serve app \"'src/demos'\""
+    "start": "node server.js"
   },
   "engines": {
     "node": "16.9.1"
