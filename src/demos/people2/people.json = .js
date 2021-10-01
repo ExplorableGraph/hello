@@ -22,7 +22,9 @@ export default async function () {
       person.photo = `https://randomuser.me/api/portraits/${group}/${number}.jpg`;
     }
   }
-  return JSON.stringify(people, null, 2);
+
+  // return JSON.stringify(people, null, 2);
+  return people;
 }
 
 /*
