@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@explorablegraph/explorable": "github:ExplorableGraph/explorable#53b745b",
+    "@explorablegraph/explorable": "github:ExplorableGraph/explorable#07763b52",
     "handlebars": "4.7.7",
     "node-fetch": "2.6.5"
   },
   "scripts": {
-    "start": "eg serve app"
+    "start": "eg serve"
   },
   "engines": {
     "node": "16.9.1"

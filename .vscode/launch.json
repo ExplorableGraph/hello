@@ -33,7 +33,7 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/src/eg/eg.js",
       // "args": ["serve app"],
-      "args": ["serve app"],
+      "args": ["serve"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.9.1/bin/node"
     },
     {
