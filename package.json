@@ -11,6 +11,6 @@
     "start": "eg serve"
   },
   "engines": {
-    "node": "16.9.1"
+    "node": "16.10.0"
   }
 }
