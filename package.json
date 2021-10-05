@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@explorablegraph/explorable": "github:ExplorableGraph/explorable#07763b52",
+    "@explorablegraph/explorable": "github:ExplorableGraph/explorable#12e1d84f",
     "handlebars": "4.7.7",
     "node-fetch": "2.6.5"
   },
