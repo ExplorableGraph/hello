@@ -1,0 +1,32 @@
+{
+  "Alice": {
+    "name": "Alice Andrews"
+  },
+  "Bob": {
+    "name": "Bob Brown"
+  },
+  "Carol": {
+    "name": "Carol Clark"
+  },
+  "David": {
+    "name": "David Diaz"
+  },
+  "Erin": {
+    "name": "Erin Evans"
+  },
+  "Faythe": {
+    "name": "Faythe Foster"
+  },
+  "Grace": {
+    "name": "Grace Gonzales"
+  },
+  "Heidi": {
+    "name": "Heidi Hill"
+  },
+  "Ivan": {
+    "name": "Ivan Irwin"
+  },
+  "Judy": {
+    "name": "Judy Jones"
+  }
+}
