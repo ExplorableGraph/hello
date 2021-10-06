@@ -1,4 +1,4 @@
-export default function (name) {
+export default function (name = "world") {
   return `
     <!DOCTYPE html>
     <html lang="en">
