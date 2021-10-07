@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "@explorablegraph/explorable": "github:ExplorableGraph/explorable#12e1d84f",
+    "@explorablegraph/explorable": "github:ExplorableGraph/explorable#467696eb",
     "handlebars": "4.7.7",
-    "node-fetch": "2.6.5"
+    "node-fetch": "2.6.5",
+    "sharp": "0.29.1"
   },
   "scripts": {
     "start": "eg serve"
