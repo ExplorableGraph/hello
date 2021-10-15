@@ -30,9 +30,9 @@
       "name": "Serve",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/src/eg/eg.js",
-      // "cwd": "${workspaceFolder}/demos/",
-      "cwd": "${workspaceFolder}/demos/gallery",
-      "args": ["serve()"],
+      "cwd": "${workspaceFolder}/demos/",
+      // "cwd": "${workspaceFolder}/demos/gallery",
+      "args": ["serve"],
       "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.10.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
