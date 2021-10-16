@@ -1,0 +1,50 @@
+# Sample greet web site as a single file.
+# This can be converted back and forth between a folder and a YAML file.
+
+# Get some data from a service.
+#
+# This will be a dictionary mapping a first name to some data (here, just the
+# full name). It will look like
+#
+# { "Alice": { "name": "Alice Andrews" } }
+#
+data.json = plain https api.jsonstorage.net v1 json d0035d30-4b79-4d5c-a1bd-3cf887349a22:
+
+# The index combines the following Handlebars template with the full data set to
+# create a list of first names. Each name links to a page for that user: e.g.,
+# Alice links to Alice.html.
+index.html = hbs(ƒ, data.json).hbs: |
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+    </head>
+    <body>
+      <h1>People</h1>
+      <ul>
+        {{#each this}}
+          <li><a href="{{@key}}.html">{{@key}}</a></li>
+        {{/each}}
+      </ul>
+    </body>
+  </html>
+
+# Generate a data file for each user with a file name like Alice.user.json. The
+# {name} pattern will match on the "Alice" part. The value of that match is then
+# used to look up the data for that user in the full data set.
+"{name}.user.json = data.json(`$name`)":
+
+# Generate an HTML page for each user that combines the following Handlebars
+# template with the user's data file generated above.
+"{name}.html = hbs(ƒ, $name.user.json).hbs": |
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+    </head>
+    <body>
+      Hello, {{name}}!
+    </body>
+  </html>
