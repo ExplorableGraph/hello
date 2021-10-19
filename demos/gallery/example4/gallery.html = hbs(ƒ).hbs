@@ -1,6 +1,6 @@
 ---
 title: Nature
-images = keys(context/images): 
+images = keys(context('images')): 
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,11 @@ images = keys(context/images):
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{{title}}</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <h1>{{title}}</h1>
