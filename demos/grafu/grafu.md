@@ -1,3 +1,0 @@
-![](Grafu.png)
-
-# Grafu
