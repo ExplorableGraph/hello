@@ -13,7 +13,7 @@ data.json = plain https api.jsonstorage.net v1 json d0035d30-4b79-4d5c-a1bd-3cf8
 # The index combines the following Handlebars template with the full data set to
 # create a list of first names. Each name links to a page for that user: e.g.,
 # Alice links to Alice.html.
-index.html = hbs(index.hbs, data.json).hbs: ""
+index.html = hbs(index.hbs, data.json): ""
 
 index.hbs: |
   <!DOCTYPE html>
