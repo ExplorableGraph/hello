@@ -10,7 +10,6 @@
       "name": "app",
       "skipFiles": ["<node_internals>/**"],
       "program": "server.js",
-      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.10.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
     {
@@ -21,7 +20,6 @@
       "program": "${workspaceFolder}/node_modules/@explorablegraph/explorable/src/eg/eg.js",
       "cwd": "${workspaceFolder}/demos/gallery",
       "args": ["copy app:3-index, files/snapshot"],
-      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.10.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
     {
@@ -33,7 +31,6 @@
       "cwd": "${workspaceFolder}/demos/",
       // "cwd": "${workspaceFolder}/demos/gallery",
       "args": ["serve"],
-      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.10.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     },
     {
@@ -42,7 +39,6 @@
       "name": "Spike",
       "skipFiles": ["<node_internals>/**"],
       "program": "${file}",
-      "runtimeExecutable": "/Users/jan/.nvm/versions/node/v16.10.0/bin/node",
       "runtimeArgs": ["--preserve-symlinks"]
     }
   ]
