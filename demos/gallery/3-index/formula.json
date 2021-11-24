@@ -1,4 +1,4 @@
 {
   "title": "Nature",
-  "images = keys(scope%images)": ""
+  "imageNames = keys(images)": ""
 }
