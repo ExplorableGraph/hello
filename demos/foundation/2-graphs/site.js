@@ -1,6 +1,7 @@
 import fetch from "node-fetch"; // Node doesn't have fetch yet.
 
-const href = "https://explorablegraph.github.io/videos/approaches/site/";
+const href =
+  "https://explorablegraph-hello.herokuapp.com/demos/foundation/service/";
 
 // ExplorableGraph representation of the URL above
 export default {
