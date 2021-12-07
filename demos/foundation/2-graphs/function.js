@@ -1,5 +1,5 @@
 function fn(name) {
-  return `Hello, ${name}.`;
+  return `Hello, ${name}! This is a function.`;
 }
 
 const domain = ["Alice", "Bob", "Carol"];

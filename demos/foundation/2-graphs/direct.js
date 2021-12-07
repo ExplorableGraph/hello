@@ -9,6 +9,6 @@ export default {
   // Get the value of a given key
   // get("Alice") => "Hello, Alice."
   async get(key) {
-    return `Hello, ${key}.`;
+    return `Hello, ${key}! This is a graph.`;
   },
 };

@@ -2,12 +2,10 @@
 
 import path from "path";
 import process from "process";
-import { fileURLToPath } from "url";
 
 // Get a file name from the command line.
 const [node, display, fileName] = process.argv;
-const thisFolder = path.dirname(fileURLToPath(import.meta.url));
-const filePath = path.resolve(thisFolder, fileName);
+const filePath = path.resolve(process.cwd(), fileName);
 
 // Load the file.
 const module = await import(filePath);
