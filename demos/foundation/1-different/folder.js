@@ -10,8 +10,8 @@ const filesFolder = path.resolve(moduleFolder, "../people");
 const fileNames = await fs.readdir(filesFolder);
 
 // Display the contents of all the files.
-for (const fileName of fileNames) {
-  const filePath = path.join(filesFolder, fileName);
-  const buffer = await fs.readFile(filePath);
-  console.log(buffer.toString());
+for (const key of fileNames) {
+  const filePath = path.join(filesFolder, key);
+  const value = await fs.readFile(filePath);
+  console.log(`${key}: ${value}`);
 }

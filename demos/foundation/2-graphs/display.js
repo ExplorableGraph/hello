@@ -14,5 +14,5 @@ const graph = module.default;
 // Display the graph.
 for await (const key of graph) {
   const value = await graph.get(key);
-  console.log(value.toString());
+  console.log(`${key}: ${value}`);
 }

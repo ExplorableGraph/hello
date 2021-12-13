@@ -13,9 +13,7 @@ data.json = https api.jsonstorage.net v1 json d0035d30-4b79-4d5c-a1bd-3cf887349a
 # The index combines the following Handlebars template with the full data set to
 # create a list of first names. Each name links to a page for that user: e.g.,
 # Alice links to Alice.html.
-index.html = index.hbs(data.json): ""
-
-index.hbs: |
+index.html = this(data.json).hbs: |
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -32,16 +30,9 @@ index.hbs: |
     </body>
   </html>
 
-# Generate a data file for each user with a file name like Alice.user.json. The
-# {name} pattern will match on the "Alice" part. The value of that match is then
-# used to look up the data for that user in the full data set.
-"{name}.user.json = data.json(`${name}`)": ""
-
 # Generate an HTML page for each user that combines the following Handlebars
-# template with the user's data file generated above.
-"{name}.html = greet.hbs(${name}.user.json)": ""
-
-greet.hbs: |
+# template with the user's data from the data file above.
+"{name}.html = this(data.json%${name}).hbs": |
   <!DOCTYPE html>
   <html lang="en">
     <head>
