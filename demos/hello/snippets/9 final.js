@@ -1,4 +1,4 @@
-import { Compose, get, keys } from "@explorablegraph/core";
+import { Compose, get } from "@explorablegraph/core";
 import { Files } from "@explorablegraph/node";
 import { DefaultPages } from "@explorablegraph/web";
 import path from "path";
@@ -11,13 +11,15 @@ class GreetingPages {
   constructor(greeting) {
     this.greeting = greeting;
   }
+
+  async *[Symbol.asyncIterator]() {
+    yield* letters;
+  }
+
   [get](key) {
-    return DefaultPages.isDefaultPage(key)
+    return key === "index.html" || key.startsWith(".")
       ? undefined
       : `${this.greeting}, ${key}.`;
-  }
-  [keys]() {
-    return letters[Symbol.iterator]();
   }
 }
 
