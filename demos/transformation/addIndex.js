@@ -16,7 +16,7 @@ export default async function addIndex(variant, indexKey = "bodyText") {
     async get(key) {
       for await (const graphKey of graph[Symbol.asyncIterator]()) {
         const value = await graph.get(graphKey);
-        const data = value ? await dataFromInput(value, graph) : undefined;
+        const data = value ? await dataFromInput(value) : undefined;
         if (data !== undefined && data[indexKey] === key) {
           return data;
         }
@@ -26,7 +26,7 @@ export default async function addIndex(variant, indexKey = "bodyText") {
   };
 }
 
-async function dataFromInput(input, graph) {
+async function dataFromInput(input) {
   let parsed = input;
   if (typeof input === "string" || input instanceof Buffer) {
     parsed = parse(String(input));

@@ -1,10 +1,11 @@
 ---
-people = parse people.yaml:
+people = parse teamFull.yaml:
 ---
 <ul>
 {{#each people}}
   <li>
-    <a href="html/{{name}}.html">{{name}}</a>
+    <a href="html/{{id}}.html">{{name}}</a>
+    <i>{{position}}</i>
   </li>
 {{/each}}
 </ul>

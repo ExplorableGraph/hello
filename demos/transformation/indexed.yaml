@@ -1,0 +1,70 @@
+aivanonko0:
+  id: aivanonko0
+  name: Annie Ivanonko
+  email: aivanonko0@biblegateway.com
+  gender: Female
+  location: Jakarta
+  position: Experience Designer
+nschoenrock1:
+  id: nschoenrock1
+  name: Nancee Schoenrock
+  email: nschoenrock1@cisco.com
+  gender: Female
+  location: Lisbon
+  position: Editor
+rglanvill2:
+  id: rglanvill2
+  name: Rudolph Glanvill
+  email: rglanvill2@blinklist.com
+  gender: Male
+  location: Lima
+  position: Administrator
+rscala3:
+  id: rscala3
+  name: Russell Scala
+  email: rscala3@upenn.edu
+  gender: Male
+  location: Prague
+  position: Engineering Architect
+jfrill4:
+  id: jfrill4
+  name: Jenny Frill
+  email: jfrill4@indiegogo.com
+  gender: Female
+  location: Beijing
+  position: Visual Designer
+cbudcock5:
+  id: cbudcock5
+  name: Caria Budcock
+  email: cbudcock5@xrea.com
+  gender: Male
+  location: Seoul
+  position: Developer
+gballance6:
+  id: gballance6
+  name: Gerry Ballance
+  email: gballance6@scribd.com
+  gender: Female
+  location: Delhi
+  position: Business Development
+lcroxon7:
+  id: lcroxon7
+  name: Louie Croxon
+  email: lcroxon7@qq.com
+  gender: Male
+  location: Santiago
+  position: Researcher
+jnagle8:
+  id: jnagle8
+  name: Jacky Nagle
+  email: jnagle8@yellowbook.com
+  gender: Female
+  location: Manila
+  position: President
+1mdavenhall9:
+  id: 1mdavenhall9
+  name: Marnia Davenhall
+  email: mdavenhall9@tuttocitta.it
+  gender: Female
+  location: Los Angeles
+  position: Customer Outreach
