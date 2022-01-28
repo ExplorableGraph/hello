@@ -3,12 +3,16 @@ const obj = {
   "hello.md": `# Hello\n`,
 };
 
-export default {
+const graph = {
   async *[Symbol.asyncIterator]() {
-    yield* Object.keys(obj);
+    for await (const key of Object.keys(obj)) {
+      yield key;
+    }
   },
 
   async get(key) {
     return obj[key];
   },
 };
+
+export default graph;

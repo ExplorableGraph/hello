@@ -1,4 +1,4 @@
 import files from "./files.js";
-import markdownsToHtmls from "./markdownsToHtmls.js";
+import mdToHtml from "./mdToHtml.js";
 
-export default markdownsToHtmls(files);
+export default mdToHtml(files);

@@ -1,17 +1,17 @@
 import path from "path";
 import rehype from "./rehype.js";
 
-export default function markdownsToHtmls(markdownGraph) {
+export default function mdToHtml(graph) {
   return {
     async *[Symbol.asyncIterator]() {
-      for await (const markdownKey of markdownGraph) {
+      for await (const markdownKey of graph) {
         yield htmlKey(markdownKey);
       }
     },
 
     async get(htmlKey) {
       const key = markdownKey(htmlKey);
-      const markdown = await markdownGraph.get(key);
+      const markdown = await graph.get(key);
       const html = markdown !== undefined ? await rehype(markdown) : undefined;
       return html;
     },
