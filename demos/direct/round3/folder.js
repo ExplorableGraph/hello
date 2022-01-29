@@ -3,9 +3,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const moduleFolder = path.dirname(fileURLToPath(import.meta.url));
-const dirname = path.resolve(moduleFolder, "markdown");
+const dirname = path.resolve(moduleFolder, "../markdown");
 
-const graph = {
+export default {
   async *[Symbol.asyncIterator]() {
     const filenames = await fs.readdir(dirname);
     for (const key of filenames) {
@@ -18,8 +18,3 @@ const graph = {
     return value;
   },
 };
-
-for await (const key of graph) {
-  const value = await graph.get(key);
-  console.log(`${key}: ${value}`);
-}
