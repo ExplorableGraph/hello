@@ -8,7 +8,7 @@ const dirname = path.resolve(moduleFolder, "../markdown");
 const graph = {
   async *[Symbol.asyncIterator]() {
     const filenames = await fs.readdir(dirname);
-    for (const key of filenames) {
+    for await (const key of filenames) {
       yield key;
     }
   },

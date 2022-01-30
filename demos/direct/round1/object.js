@@ -1,6 +1,7 @@
 const obj = {
-  "goodbye.md": `# Goodbye\n`,
-  "hello.md": `# Hello\n`,
+  "Alice.md": "Hello, **Alice**.",
+  "Bob.md": "Hello, **Bob**.",
+  "Carol.md": "Hello, **Carol**.",
 };
 
 for (const key of Object.keys(obj)) {

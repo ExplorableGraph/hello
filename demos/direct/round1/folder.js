@@ -6,7 +6,7 @@ const moduleFolder = path.dirname(fileURLToPath(import.meta.url));
 const dirname = path.resolve(moduleFolder, "../markdown");
 
 const filenames = await fs.readdir(dirname);
-for await (const key of filenames) {
+for (const key of filenames) {
   const value = await fs.readFile(path.join(dirname, key));
   console.log(`${key}: ${value}`);
 }

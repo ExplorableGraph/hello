@@ -1,6 +1,7 @@
 const obj = {
-  "goodbye.md": `# Goodbye\n`,
-  "hello.md": `# Hello\n`,
+  "Alice.md": "Hello, **Alice**.",
+  "Bob.md": "Hello, **Bob**.",
+  "Carol.md": "Hello, **Carol**.",
 };
 
 const graph = {
@@ -11,7 +12,8 @@ const graph = {
   },
 
   async get(key) {
-    return obj[key];
+    const value = obj[key];
+    return value;
   },
 };
 

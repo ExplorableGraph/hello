@@ -1,16 +1,16 @@
-import rehype from "./rehype.js";
+import rehype from "../rehype.js";
 
-export default function mdToHtml(graph) {
+export default function (graph) {
   return {
     async *[Symbol.asyncIterator]() {
       for await (const key of graph) {
-        yield htmlKey(key);
+        yield key;
       }
     },
 
     async get(key) {
       const markdown = await graph.get(key);
-      const html = markdown !== undefined ? await rehype(markdown) : undefined;
+      const html = await rehype(markdown);
       return html;
     },
   };
